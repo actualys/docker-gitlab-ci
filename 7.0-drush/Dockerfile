@@ -1,4 +1,4 @@
-FROM drupaldocker/php:cli-7.0
+FROM drupaldocker/php:7.0-cli
 MAINTAINER drupal-docker
 
 RUN apt-get update && apt-get install -y mysql-client openssh-client rsync wget curl \
