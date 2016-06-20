@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y mysql-client openssh-client rsync wget 
   && drush core-status -y \
   && rm -rf /var/lib/apt/lists/*
 
+COPY gitlab-env.php /
+RUN chmod +x /gitlab-env.php
 COPY setup-ssh.sh /
 RUN chmod +x /setup-ssh.sh
 
